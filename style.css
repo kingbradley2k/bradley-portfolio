@@ -160,6 +160,7 @@ section h2 {
   border-radius: 8px;
   border: 1px solid #3b82f6a1;
   transition: all 0.3s ease;
+    
 }
 
 .contact-links a:hover {
@@ -173,3 +174,15 @@ section h2 {
   color: #777;
   font-size: 0.9rem;
 }
+/* === Vertical Scroll Slides === */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+

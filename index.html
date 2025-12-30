@@ -1,105 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bradley Duncan | Tech Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bradley Okore | AppSec & Full-Stack Developer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <div class="container">
-    <!-- Profile Section -->
+
+    <!-- PROFILE -->
     <section class="profile">
-      <img src="avatar.png" alt="Bradley's Avatar" class="avatar">
+      <img src="avatar.jpg" alt="Profile Picture" class="avatar">
+
       <div class="intro">
-        <h1>Bradley Duncan Okore</h1>
-        <p class="role">Tech Enthusiast • Developer • Cybersecurity Enthusiast</p>
+        <h1>Bradley Okore</h1>
+        <p class="role">Aspiring Application Security Engineer | Full-Stack Developer</p>
         <p class="bio">
-          Passionate about building meaningful tech — from secure backend systems to 
-          modern web apps. Exploring cybersecurity, software development, and innovation.
+          I build web and mobile applications — then challenge them the way an attacker would.
+          My focus is on secure-by-design development, API security, and mobile application security.
         </p>
       </div>
     </section>
 
-    <!-- Interests -->
-    <section class="interests">
-      <h2>Interests</h2>
+    <!-- INTERESTS / TAGS -->
+    <section>
+      <h2>Focus Areas</h2>
       <div class="tags">
-        <span>Cybersecurity</span>
-        <span>Web Development</span>
-        <span>UI/UX Design</span>
-        <span>Networking</span>
-        <span>Tech Content</span>
+        <span>Application Security</span>
+        <span>Mobile Security</span>
+        <span>API Security</span>
+        <span>Android (Java)</span>
+        <span>Backend Development</span>
+        <span>Threat Modeling</span>
+        <span>OWASP Top 10</span>
       </div>
     </section>
 
-    <!-- Projects -->
+    <!-- PROJECTS -->
     <section class="projects">
-      <h2>Projects</h2>
+      <h2>Selected Projects</h2>
+
       <div class="project-grid">
+
         <div class="card">
-          <h3>Afyatrack</h3>
-          <p>Web app for real-time health monitoring and tracking patient metrics remotely.</p>
+          <h3>Hotel & Campus Ordering App</h3>
+          <p>
+            A mobile ordering system designed for campus and hotel environments.
+            Users place orders while admins manage items and fulfillment.
+          </p>
+          <p>
+            <strong>Security Focus:</strong> Authentication flow, role separation,
+            order tampering prevention, and input validation.
+          </p>
         </div>
+
         <div class="card">
-          <h3>Campus Delivery System</h3>
-          <p>Platform for students to order food and essentials from local vendors to hostels.</p>
+          <h3>Remote Medical Diagnostics System (RMDS)</h3>
+          <p>
+            Backend system handling patient data, appointments, and health metrics
+            with role-based access for doctors and patients.
+          </p>
+          <p>
+            <strong>Security Focus:</strong> API protection, sensitive data handling,
+            access control, and secure database design.
+          </p>
         </div>
+
         <div class="card">
-          <h3>Telemedicine Backend</h3>
-          <p>Node.js + MongoDB API powering patient-doctor interactions and health metrics.</p>
+          <h3>Land Measuring Android App</h3>
+          <p>
+            Android application integrating maps and GPS for accurate land measurement,
+            targeting real-world use cases in Kenya.
+          </p>
+          <p>
+            <strong>Security Focus:</strong> Location permission handling, data integrity,
+            and privacy-aware design.
+          </p>
         </div>
+
         <div class="card">
-          <h3>Graphic Design</h3>
-          <p>Personal branding posters and flyers .</p>
+          <h3>Application Security Labs & Practice</h3>
+          <p>
+            Hands-on practice with intentionally vulnerable applications to understand
+            real exploitation techniques.
+          </p>
+          <p>
+            <strong>Tools:</strong> OWASP Juice Shop, DVWA, Nmap, Wireshark, Burp Suite (learning).
+          </p>
         </div>
+
       </div>
     </section>
 
-    <!-- Skills -->
-    <section class="skills">
+    <!-- SKILLS -->
+    <section>
       <h2>Skills & Tools</h2>
+
       <div class="skill-grid">
+
         <div class="skill-card">
-          <h4>Languages</h4>
-          <p> JavaScript, Java</p>
+          <h4>Development</h4>
+          <p>Java (Android), XML UI Design, Node.js, Express, REST APIs, Git & GitHub</p>
         </div>
+
         <div class="skill-card">
-          <h4>Backend Tools</h4>
-          <p>Node.js, MongoDB, Supabase</p>
+          <h4>Security</h4>
+          <p>OWASP Top 10, API Security, Authentication & Authorization, Input Validation</p>
         </div>
+
         <div class="skill-card">
-          <h4>Design</h4>
-          <p>Figma, Tailwind CSS</p>
+          <h4>Tools</h4>
+          <p>Kali Linux, Nmap, Wireshark, Docker, Postman, Burp Suite (Beginner)</p>
         </div>
-        <div class="skill-card">
-          <h4>Systems</h4>
-          <p>Kali Linux, Git, VS Code</p>
-        </div>
+
       </div>
     </section>
 
-    <!-- Journey -->
+    <!-- SECURITY MINDSET -->
     <section class="journey">
-      <h2>My Tech Journey</h2>
+  <h2>My Approaches</h2>
+
+  <ul>
+    <li>
+      <strong>I assume all user input is hostile until proven otherwise.</strong><br>
+      In practice, this means I never trust data simply because it comes from a user interface or a known client.
+I design systems with the assumption that input can be manipulated, replayed, or malformed. This mindset guides my use of input validation, server-side checks, and defensive coding techniques to reduce the risk of injection flaws, broken logic, and unexpected behavior.
+
+    <li>
+      <strong>I identify trust boundaries before writing features.</strong><br>
+     Before implementing functionality, I think about where trust begins and ends within the system.
+I distinguish between trusted components (server, database) and untrusted ones (clients, external services). This helps me design authentication flows, authorization checks, and data flows that prevent privilege escalation, insecure direct object references, and unauthorized access.
+    </li>
+
+    <li>
+      <strong>I think in abuse cases, not just happy paths.</strong><br>
+      Rather than focusing only on how a feature is intended to be used, I also consider how it could be misused.
+I ask questions like: What happens if this endpoint is called repeatedly? What if parameters are modified? What if a user skips steps?
+This approach helps me uncover logic flaws, rate-limiting issues, and security gaps that might not be visible during normal use.
+    </li>
+
+    <li>
+      <strong>I aim to build systems that fail safely.</strong><br>
+      I design applications to handle errors in a controlled and predictable way.
+This includes avoiding sensitive information in error messages, ensuring proper logging without exposing internal details, and maintaining system stability even when something goes wrong. The goal is to minimize information leakage while keeping the system resilient and observable
+    </li>
+  </ul>
+</section>
+
+    <!-- LEARNING JOURNEY -->
+    <section class="journey">
+      <h2>Learning Journey</h2>
       <ul>
-        <li><strong>2023:</strong> .</li>
-        <li><strong>2024:</strong> .</li>
-        <li><strong>2025:</strong> Building Secure Systems for Everyone</li>
+        <li>Full-Stack Development → Backend APIs → Application Security</li>
+        <li>Hands-on security labs and real-world inspired projects</li>
+        <li>Continuous learning through documentation, labs, and content creation</li>
       </ul>
     </section>
 
-    <!-- Contact -->
-    <section class="contact">
-      <h2>Let’s Connect</h2>
+    <!-- CONTACT -->
+    <section>
+      <h2>Connect</h2>
       <div class="contact-links">
-        <a href="https://github.com/" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
-        <a href="https://x.com/" target="_blank">Twitter</a>
-        <a href="mailto:bradley@example.com">Email</a>
+        <a href="https://github.com/kingbradley2k" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+        <a href="mailto:youremail@example.com">Email</a>
       </div>
-      <p class="footer">© 2025 Bradley Duncan | Always building, always learning.</p>
     </section>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>Built with intention. Secured by mindset.</p>
+    </div>
+
   </div>
-</body>
-</html>
+
