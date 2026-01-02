@@ -37,8 +37,7 @@ body {
   border-radius: 50%;
   border: 3px solid #3b82f6;
   box-shadow: 0 0 20px #3b82f6a1;
-
-
+}
 .intro h1 {
   font-size: 2rem;
   font-weight: 600;
@@ -184,5 +183,4 @@ body {
   overflow-y: scroll;
   height: 100vh;
 }
-
 
