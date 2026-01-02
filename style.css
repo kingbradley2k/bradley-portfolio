@@ -37,11 +37,6 @@ body {
   border-radius: 50%;
   border: 3px solid #3b82f6;
   box-shadow: 0 0 20px #3b82f6a1;
-}
-.thm-badge.below {
-  position: static;
-  margin-top: 0.5rem;
-}
 
 
 .intro h1 {
